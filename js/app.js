@@ -21,7 +21,7 @@ const storage = (table) => {
         localStorage.setItem(table, JSON.stringify(storage));
     };
 
-    const has = (key) => Object.keys(get()).includes(key);
+    const has = (key) => Object.keys(get() ?? {}).includes(key);
 
     return {
         get,
